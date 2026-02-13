@@ -1,16 +1,56 @@
 {
-    "name": "Bot Cluster",
-    "description": "A Repository To Run Multiple Telegram Bots At Once",
-    "logo": "https://telegra.ph/file/4a483d6f7e6078ae4cd45.jpg",
-    "keywords": ["Telegram", "python", "Cluster", "GitHub", "Repository"],
-    "repository": "https://github.com/itskrishname/TeraBoxDL.git",
-    "success_url": "",
-    "stack": "container",
-    "env": {
-        "CLUSTER_01": {
-            "description": "",
-            "value": "",
-            "required": true
-        }
+  "name": "TeraBox Downloader Bot",
+  "description": "A Telegram bot to download files from TeraBox links directly.",
+  "keywords": [
+    "telegram",
+    "bot",
+    "terabox",
+    "python",
+    "downloader"
+  ],
+  "repository": "https://github.com/itskrishname/TeraBoxDL",
+  "logo": "https://telegra.ph/file/825e6f3630c72c5771746.jpg",
+  "env": {
+    "API_ID": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": "28891870",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": "ffc3794690bf254d2867ac58fd293a60",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "Get this token from @BotFather on Telegram",
+      "value": "",
+      "required": true
+    },
+    "ADMINS": {
+      "description": "User ID of the Admin (Who can control the bot). Use @userinfobot to get ID.",
+      "value": "7660990923",
+      "required": true
+    },
+    "MONGO_URI": {
+      "description": "Your MongoDB Connection String (from https://cloud.mongodb.com)",
+      "value": "mongodb+srv://raj:krishna@cluster0.eq8xrjs.mongodb.net/",
+      "required": true
+    },
+    "DB_NAME": {
+      "description": "Name of your Database (e.g., TeraBoxBot)",
+      "value": "tTeraBoxBot",
+      "required": false
+    },
+    "LOG_CHANNEL": {
+      "description": "Channel ID for Logs (Start with -100). Make sure bot is admin there.",
+      "value": "",
+      "required": true
     }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "stack": "container"
 }
