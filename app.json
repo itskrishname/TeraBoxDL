@@ -43,7 +43,7 @@
     },
     "LOG_CHANNEL": {
       "description": "Channel ID for Logs (Start with -100). Make sure bot is admin there.",
-      "value": "",
+      "value": "-1002527268373",
       "required": true
     }
   },
